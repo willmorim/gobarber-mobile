@@ -184,7 +184,9 @@ const CreateAppointment: React.FC = () => {
                 onPress={() => handleSelectProvider(provider.id)}
                 selected={provider.id === selectedProvider}
               >
-                <ProviderAvatar source={{ uri: provider.avatar_url }} />
+                <ProviderAvatar
+                  source={{ uri: provider.avatar_url || undefined }}
+                />
                 <ProviderName selected={provider.id === selectedProvider}>
                   {provider.name}
                 </ProviderName>
